@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Directory - Find the Perfect AI Tool</title>
+    <meta name="description" content="Curated directory of the best AI tools for writing, image generation, video, coding, and more. Updated weekly.">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #0f0f0f;
+            --card: #1a1a1a;
+            --accent: #6366f1;
+            --text: #ffffff;
+            --muted: #888;
+            --border: #333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            margin-left: 24px;
+        }
+
+        nav a:hover {
+            color: var(--text);
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 16px 24px;
+            font-size: 18px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--card);
+            color: var(--text);
+        }
+
+        .search-box input::placeholder {
+            color: var(--muted);
+        }
+
+        /* Categories */
+        .categories {
+            padding: 60px 0;
+        }
+
+        .categories h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 16px;
+        }
+
+        .category-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .category-card:hover {
+            border-color: var(--accent);
+        }
+
+        .category-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .category-name {
+            font-weight: 600;
+        }
+
+        .category-count {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* Tools Grid */
+        .tools-section {
+            padding: 60px 0;
+        }
+
+        .tools-section h2 {
+            margin-bottom: 40px;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .tool-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .tool-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 12px;
+        }
+
+        .tool-name {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .tool-category {
+            background: var(--accent);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .tool-description {
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        .tool-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .tool-feature {
+            background: var(--bg);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .tool-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tool-pricing {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .tool-link {
+            background: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .tool-link:hover {
+            opacity: 0.9;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 60px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .newsletter h2 {
+            margin-bottom: 16px;
+        }
+
+        .newsletter p {
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        .newsletter-form button {
+            padding: 12px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 32px; }
+            .newsletter { padding: 40px 20px; }
+            .newsletter-form { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">AI Tools HQ</div>
+            <nav>
+                <a href="#categories">Categories</a>
+                <a href="#tools">All Tools</a>
+                <a href="#newsletter">Newsletter</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Find the Perfect AI Tool</h1>
+            <p>Curated directory of 100+ AI tools for writing, images, video, coding, and more. Updated weekly.</p>
+            <div class="search-box">
+                <input type="text" id="search" placeholder="Search AI tools..." onkeyup="filterTools()">
+            </div>
+        </div>
+    </section>
+
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2>Browse by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" onclick="filterByCategory('writing')">
+                    <div class="category-icon">✍️</div>
+                    <div class="category-name">Writing</div>
+                    <div class="category-count">12 tools</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('image')">
+                    <div class="category-icon">🎨</div>
+                    <div class="category-name">Image</div>
+                    <div class="category-count">8 tools</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('video')">
+                    <div class="category-icon">🎬</div>
+                    <div class="category-name">Video</div>
+                    <div class="category-count">6 tools</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('audio')">
+                    <div class="category-icon">🎤</div>
+                    <div class="category-name">Audio</div>
+                    <div class="category-count">5 tools</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('coding')">
+                    <div class="category-icon">💻</div>
+                    <div class="category-name">Coding</div>
+                    <div class="category-count">7 tools</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('productivity')">
+                    <div class="category-icon">📊</div>
+                    <div class="category-name">Productivity</div>
+                    <div class="category-count">9 tools</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('research')">
+                    <div class="category-icon">🔍</div>
+                    <div class="category-name">Research</div>
+                    <div class="category-count">4 tools</div>
+                </div>
+                <div class="category-card" onclick="filterByCategory('marketing')">
+                    <div class="category-icon">📈</div>
+                    <div class="category-name">Marketing</div>
+                    <div class="category-count">6 tools</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-section" id="tools">
+        <div class="container">
+            <h2>All AI Tools</h2>
+            <div class="tools-grid" id="toolsGrid">
+                <!-- Tools loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <h2>Get Weekly AI Tool Updates</h2>
+            <p>New tools, deals, and tutorials delivered every Friday.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="your@email.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>AI Tools HQ - Updated weekly with the best AI tools</p>
+            <p style="margin-top: 8px;">Built by Kai</p>
+        </div>
+    </footer>
+
+    <script>
+        const tools = [
+            {
+                name: "ChatGPT",
+                category: "writing",
+                description: "OpenAI's conversational AI for writing, coding, analysis, and more",
+                pricing: "Free / $20/mo",
+                url: "https://chat.openai.com",
+                features: ["Conversation", "Code", "Analysis", "Images"]
+            },
+            {
+                name: "Claude",
+                category: "writing",
+                description: "Anthropic's AI assistant known for nuanced writing and analysis",
+                pricing: "Free / $20/mo",
+                url: "https://claude.ai",
+                features: ["Long context", "Writing", "Analysis", "Coding"]
+            },
+            {
+                name: "Midjourney",
+                category: "image",
+                description: "Leading AI image generator known for artistic outputs",
+                pricing: "$10-60/mo",
+                url: "https://midjourney.com",
+                features: ["Text to image", "Styles", "Variations", "Upscaling"]
+            },
+            {
+                name: "Jasper",
+                category: "writing",
+                description: "AI copywriting tool for marketing teams",
+                pricing: "$49/mo+",
+                url: "https://jasper.ai",
+                features: ["Marketing copy", "Templates", "Brand voice", "Team"]
+            },
+            {
+                name: "Runway",
+                category: "video",
+                description: "AI video generation with text-to-video",
+                pricing: "Free / $15/mo+",
+                url: "https://runwayml.com",
+                features: ["Text to video", "Editing", "Gen-2", "Motion"]
+            },
+            {
+                name: "ElevenLabs",
+                category: "audio",
+                description: "AI voice generation with natural text-to-speech",
+                pricing: "Free / $5/mo+",
+                url: "https://elevenlabs.io",
+                features: ["Voice cloning", "TTS", "Multilingual", "API"]
+            },
+            {
+                name: "GitHub Copilot",
+                category: "coding",
+                description: "AI pair programmer in your editor",
+                pricing: "$10/mo",
+                url: "https://github.com/features/copilot",
+                features: ["Code completion", "Chat", "Multi-language", "IDE"]
+            },
+            {
+                name: "Cursor",
+                category: "coding",
+                description: "AI-first code editor for pair programming",
+                pricing: "Free / $20/mo",
+                url: "https://cursor.sh",
+                features: ["AI chat", "Code gen", "Codebase aware", "Multi-file"]
+            },
+            {
+                name: "Surfer SEO",
+                category: "marketing",
+                description: "AI-powered SEO and content optimization",
+                pricing: "$89/mo+",
+                url: "https://surferseo.com",
+                features: ["Content editor", "SERP analysis", "Keywords", "Audit"]
+            },
+            {
+                name: "Perplexity",
+                category: "research",
+                description: "AI search engine with cited sources",
+                pricing: "Free / $20/mo",
+                url: "https://perplexity.ai",
+                features: ["Search", "Citations", "Follow-ups", "Collections"]
+            },
+            {
+                name: "Notion AI",
+                category: "productivity",
+                description: "AI writing assistant in Notion",
+                pricing: "$10/mo add-on",
+                url: "https://notion.so",
+                features: ["Writing", "Summaries", "Actions", "Translation"]
+            },
+            {
+                name: "Descript",
+                category: "video",
+                description: "AI video and podcast editing",
+                pricing: "Free / $12/mo+",
+                url: "https://descript.com",
+                features: ["Transcription", "Overdub", "Filler removal", "Screen rec"]
+            },
+            {
+                name: "Leonardo.ai",
+                category: "image",
+                description: "AI image generation with fine-tuned models",
+                pricing: "Free / $12/mo+",
+                url: "https://leonardo.ai",
+                features: ["Image gen", "Fine-tuning", "Game assets", "Canvas"]
+            },
+            {
+                name: "HeyGen",
+                category: "video",
+                description: "AI video generator with realistic avatars",
+                pricing: "$29/mo+",
+                url: "https://heygen.com",
+                features: ["AI avatars", "Voice clone", "Templates", "API"]
+            },
+            {
+                name: "Copy.ai",
+                category: "writing",
+                description: "AI copywriting for marketing and sales",
+                pricing: "Free / $49/mo+",
+                url: "https://copy.ai",
+                features: ["Templates", "Workflows", "Chat", "Brand voice"]
+            }
+        ];
+
+        function renderTools(filteredTools) {
+            const grid = document.getElementById('toolsGrid');
+            grid.innerHTML = filteredTools.map(tool => `
+                <div class="tool-card" data-category="${tool.category}">
+                    <div class="tool-header">
+                        <div class="tool-name">${tool.name}</div>
+                        <span class="tool-category">${tool.category}</span>
+                    </div>
+                    <p class="tool-description">${tool.description}</p>
+                    <div class="tool-features">
+                        ${tool.features.map(f => `<span class="tool-feature">${f}</span>`).join('')}
+                    </div>
+                    <div class="tool-footer">
+                        <span class="tool-pricing">${tool.pricing}</span>
+                        <a href="${tool.url}" target="_blank" class="tool-link">Try it →</a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterTools() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const filtered = tools.filter(t =>
+                t.name.toLowerCase().includes(query) ||
+                t.description.toLowerCase().includes(query) ||
+                t.category.includes(query)
+            );
+            renderTools(filtered);
+        }
+
+        function filterByCategory(category) {
+            const filtered = tools.filter(t => t.category === category);
+            renderTools(filtered);
+            document.getElementById('tools').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Initial render
+        renderTools(tools);
+    </script>
+</body>
+</html>

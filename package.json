@@ -1,0 +1,9 @@
+{
+  "name": "ai-tools-directory",
+  "version": "1.0.0",
+  "description": "Curated directory of AI tools",
+  "scripts": {
+    "dev": "npx serve public",
+    "build": "echo 'Static site - no build needed'"
+  }
+}

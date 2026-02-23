@@ -1,0 +1,182 @@
+{
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "category": "writing",
+      "description": "OpenAI's conversational AI for writing, coding, analysis, and more",
+      "pricing": "Free / $20/mo Plus",
+      "url": "https://chat.openai.com",
+      "affiliate": null,
+      "features": ["Conversation", "Code generation", "Analysis", "Image generation (Plus)"],
+      "rating": 4.8
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "category": "writing",
+      "description": "Anthropic's AI assistant known for nuanced writing and analysis",
+      "pricing": "Free / $20/mo Pro",
+      "url": "https://claude.ai",
+      "affiliate": null,
+      "features": ["Long context", "Nuanced writing", "Analysis", "Coding"],
+      "rating": 4.8
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "category": "image",
+      "description": "Leading AI image generator known for artistic, high-quality outputs",
+      "pricing": "$10-60/mo",
+      "url": "https://midjourney.com",
+      "affiliate": null,
+      "features": ["Text to image", "Style control", "Variations", "Upscaling"],
+      "rating": 4.9
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "category": "writing",
+      "description": "AI copywriting tool for marketing teams and content creators",
+      "pricing": "$49/mo+",
+      "url": "https://jasper.ai",
+      "affiliate": "https://jasper.ai?ref=kaiempire",
+      "commission": "30% recurring",
+      "features": ["Marketing copy", "Templates", "Brand voice", "Team collaboration"],
+      "rating": 4.5
+    },
+    {
+      "id": "surfer-seo",
+      "name": "Surfer SEO",
+      "category": "marketing",
+      "description": "AI-powered SEO tool for content optimization and keyword research",
+      "pricing": "$89/mo+",
+      "url": "https://surferseo.com",
+      "affiliate": "https://surferseo.com?ref=kaiempire",
+      "commission": "25% recurring",
+      "features": ["Content editor", "SERP analysis", "Keyword research", "Audit"],
+      "rating": 4.6
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "category": "video",
+      "description": "AI video generation and editing with text-to-video capabilities",
+      "pricing": "Free / $15/mo+",
+      "url": "https://runwayml.com",
+      "affiliate": null,
+      "features": ["Text to video", "Video editing", "Gen-2", "Motion brush"],
+      "rating": 4.7
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "category": "audio",
+      "description": "AI voice generation with natural-sounding text-to-speech",
+      "pricing": "Free / $5/mo+",
+      "url": "https://elevenlabs.io",
+      "affiliate": null,
+      "features": ["Voice cloning", "Text to speech", "Multilingual", "API"],
+      "rating": 4.8
+    },
+    {
+      "id": "notion-ai",
+      "name": "Notion AI",
+      "category": "productivity",
+      "description": "AI writing assistant built into Notion workspace",
+      "pricing": "$10/mo add-on",
+      "url": "https://notion.so",
+      "affiliate": null,
+      "features": ["Writing", "Summaries", "Action items", "Translation"],
+      "rating": 4.4
+    },
+    {
+      "id": "descript",
+      "name": "Descript",
+      "category": "video",
+      "description": "AI-powered video and podcast editing with transcription",
+      "pricing": "Free / $12/mo+",
+      "url": "https://descript.com",
+      "affiliate": "https://descript.com?ref=kaiempire",
+      "commission": "15%",
+      "features": ["Transcription", "Overdub", "Filler word removal", "Screen recording"],
+      "rating": 4.6
+    },
+    {
+      "id": "copy-ai",
+      "name": "Copy.ai",
+      "category": "writing",
+      "description": "AI copywriting for marketing, sales, and content",
+      "pricing": "Free / $49/mo+",
+      "url": "https://copy.ai",
+      "affiliate": null,
+      "features": ["Templates", "Workflows", "Chat", "Brand voice"],
+      "rating": 4.3
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "category": "research",
+      "description": "AI-powered search engine with cited sources",
+      "pricing": "Free / $20/mo Pro",
+      "url": "https://perplexity.ai",
+      "affiliate": null,
+      "features": ["Search", "Citations", "Follow-up questions", "Collections"],
+      "rating": 4.7
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "category": "coding",
+      "description": "AI pair programmer that suggests code in your editor",
+      "pricing": "$10/mo",
+      "url": "https://github.com/features/copilot",
+      "affiliate": null,
+      "features": ["Code completion", "Chat", "Multi-language", "IDE integration"],
+      "rating": 4.7
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "category": "coding",
+      "description": "AI-first code editor built for pair programming with AI",
+      "pricing": "Free / $20/mo Pro",
+      "url": "https://cursor.sh",
+      "affiliate": null,
+      "features": ["AI chat", "Code generation", "Codebase understanding", "Multi-file edits"],
+      "rating": 4.8
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "category": "video",
+      "description": "AI video generator with realistic avatars and voices",
+      "pricing": "$29/mo+",
+      "url": "https://heygen.com",
+      "affiliate": null,
+      "features": ["AI avatars", "Voice cloning", "Templates", "API"],
+      "rating": 4.5
+    },
+    {
+      "id": "leonardo",
+      "name": "Leonardo.ai",
+      "category": "image",
+      "description": "AI image generation with fine-tuned models and game assets",
+      "pricing": "Free / $12/mo+",
+      "url": "https://leonardo.ai",
+      "affiliate": null,
+      "features": ["Image generation", "Fine-tuning", "Game assets", "Realtime canvas"],
+      "rating": 4.6
+    }
+  ],
+  "categories": [
+    {"id": "writing", "name": "Writing & Content", "icon": "✍️"},
+    {"id": "image", "name": "Image Generation", "icon": "🎨"},
+    {"id": "video", "name": "Video", "icon": "🎬"},
+    {"id": "audio", "name": "Audio & Voice", "icon": "🎤"},
+    {"id": "coding", "name": "Coding", "icon": "💻"},
+    {"id": "productivity", "name": "Productivity", "icon": "📊"},
+    {"id": "research", "name": "Research", "icon": "🔍"},
+    {"id": "marketing", "name": "Marketing", "icon": "📈"}
+  ]
+}
