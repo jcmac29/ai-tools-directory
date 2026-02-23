@@ -1,0 +1,8 @@
+# robots.txt for AI Tools Directory
+# https://jcmac29.github.io/ai-tools-directory/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jcmac29.github.io/ai-tools-directory/sitemap.xml
